@@ -5,16 +5,16 @@ using UnityEngine;
 public class Ex_08 : MonoBehaviour
 {
     public int leap;
-    
+    public bool years2;
     private bool year(int years)
     {
         if (years % 4 == 0 && years % 100 > 0 || years % 400 == 0)
         {
-            return true;
+            return years2 == true;
         }
         else
         {
-            return false;
+            return years2 == false;
         }
     }
 
@@ -22,11 +22,11 @@ public class Ex_08 : MonoBehaviour
     {
         year(leap);
 
-        if(year = true)
+        if(years2 == true)
         {
             Debug.Log($"The year {leap} it's a leap year");
         }
-        else if (year = false)
+        else if (years2 == false)
         {
             Debug.Log($"The year {leap} it's not a leap year");
         }
