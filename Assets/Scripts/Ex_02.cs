@@ -18,7 +18,7 @@ public class Ex_02 : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void Start()
     {
         even();
         if(isItEven == true)
