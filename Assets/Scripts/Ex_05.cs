@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Ex_05 : MonoBehaviour
 {
+    //Varibale for the number we are going to use
     public int mult;
 
+    //Making a function to calculate the table
     private void calculator(int num)
     {
         Debug.Log($"{num} x 1 = {num * 1}");
@@ -22,6 +24,7 @@ public class Ex_05 : MonoBehaviour
 
     private void Start()
     {
+        //Making the call
         calculator(mult);
 
     }

@@ -4,29 +4,32 @@ using UnityEngine;
 
 public class Ex_08 : MonoBehaviour
 {
+    //Variable of the year
     public int leap;
-    public bool years2;
+    
+    //Funciton that checks if a year it's a leap year or not, returns a true or false in each case
     private bool year(int years)
     {
         if (years % 4 == 0 && years % 100 > 0 || years % 400 == 0)
         {
-            return years2 == true;
+            return true;
         }
         else
         {
-            return years2 == false;
+            return false;
         }
     }
 
     private void Start()
     {
+        //Making the call
         year(leap);
-
-        if(years2 == true)
+        //Then we check if the function is true or false, to distern in the console the results
+        if(year(leap) == true)
         {
             Debug.Log($"The year {leap} it's a leap year");
         }
-        else if (years2 == false)
+        else
         {
             Debug.Log($"The year {leap} it's not a leap year");
         }
